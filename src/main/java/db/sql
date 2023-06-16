@@ -1,0 +1,53 @@
+use thiraka_suwa_sewa;
+create table doctor(
+    doctorId varchar(100)primary key ,
+    mr_ms varchar(10),
+    d_name varchar(100),
+    gen varchar(80),
+    free decimal(10,2),
+    phoneNumber varchar(14),
+    gmail varchar(80)
+);
+create table timePeriod(
+    no varchar(100) primary key,
+    doctorId varchar(100),
+    d_name varchar(100),
+    day varchar(50),
+    fromTime time,
+    toTime text,
+    constraint FOREIGN KEY(doctorId) references doctor(doctorId)
+);
+create table patient(
+    patientIdNumber varchar(50) primary key ,
+    patientName varchar(100),
+    age int,
+    phoneNumber varchar(14),
+    gen varchar(100),
+    address varchar(100)
+);
+
+create table appointnment(
+    id varchar(200) ,
+    number varchar(200),
+    patientIdNumber varchar(50),
+    doutor_name varchar(100),
+    doctor_free decimal(10,2),
+    patient_Name varchar(100),
+    hospital_free decimal(10,2),
+    tot_amount decimal(10,2),
+    chash_paod decimal(10,2),
+    primary key (patientIdNumber,id),
+    constraint foreign key (patientIdNumber) references patient(patientIdNumber)on update cascade on delete cascade
+
+
+);
+
+create table frees(
+    hosFree decimal(10,2)
+    );
+
+create table testFree(
+    testName varchar(50)primary key ,
+    free decimal(10,2)
+
+);

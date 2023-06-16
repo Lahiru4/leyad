@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="620.0" prefWidth="794.0" stylesheets="@assests/styles/addDoctor.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddDoctorController">
+   <children>
+      <TextField fx:id="doctorId" editable="false" layoutX="274.0" layoutY="78.0" prefHeight="33.0" prefWidth="356.0" style="-fx-font-size: 15;" styleClass="addTexCss">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="name" layoutX="274.0" layoutY="136.0" prefHeight="33.0" prefWidth="356.0" style="-fx-font-size: 15; -fx-font-weight: bold;" styleClass="addTexCss">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="phoneNumber" layoutX="274.0" layoutY="412.0" prefHeight="33.0" prefWidth="356.0" style="-fx-font-size: 15;" styleClass="addTexCss">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="free" layoutX="274.0" layoutY="265.0" prefHeight="33.0" prefWidth="356.0" style="-fx-font-size: 15;" styleClass="addTexCss" stylesheets="@assests/styles/addDoctor.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="51.0" layoutY="84.0" style="-fx-font-size: 20;" styleClass="lbl" text="Doctor Id">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="418.0" style="-fx-font-size: 20;" styleClass="lbl" text="Phone Number">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="271.0" style="-fx-font-size: 20;" styleClass="lbl" text="Free">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="207.0" style="-fx-font-size: 20;" styleClass="lbl" text="Gender">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="142.0" style="-fx-font-size: 20;" styleClass="lbl" text="Name">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="mr_ms" layoutX="148.0" layoutY="136.0" prefHeight="33.0" prefWidth="119.0" style="-fx-font-size: 15; -fx-font-weight: bold;" styleClass="addTexCss" />
+      <TextField fx:id="gmail" layoutX="274.0" layoutY="474.0" prefHeight="33.0" prefWidth="356.0" style="-fx-font-size: 15;" styleClass="addTexCss">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="51.0" layoutY="480.0" style="-fx-font-size: 20;" styleClass="lbl" text="Gmail">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="save" buttonType="RAISED" layoutX="569.0" layoutY="555.0" onAction="#saveOnAction" prefHeight="44.0" prefWidth="199.0" styleClass="btn" text="Save">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-checkmark-sign-with-outline-effect-isolated-on-white-background-36.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <ComboBox fx:id="gen" layoutX="274.0" layoutY="205.0" prefHeight="27.0" prefWidth="356.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+      <Label layoutX="507.0" layoutY="20.0" text="Add Doctor " textFill="#f80000">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="hosFee" layoutX="274.0" layoutY="343.0" prefHeight="33.0" prefWidth="356.0" style="-fx-font-size: 15;" styleClass="addTexCss" stylesheets="@assests/styles/addDoctor.css">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Label layoutX="52.0" layoutY="347.0" style="-fx-font-size: 20;" styleClass="lbl" text="Hospital  Fee">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

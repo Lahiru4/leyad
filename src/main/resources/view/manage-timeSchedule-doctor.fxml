@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="699.0" prefWidth="1001.0" stylesheets="@assests/styles/addDoctorTime.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageTimeScheduleDoctorController">
+   <children>
+      <TableView fx:id="timeTable" layoutX="31.0" layoutY="177.0" prefHeight="503.0" prefWidth="930.0" stylesheets="@assests/styles/Table.css">
+        <columns>
+          <TableColumn fx:id="d_name" prefWidth="359.0" text="Doctor" />
+          <TableColumn fx:id="Day" minWidth="0.0" prefWidth="177.0" text="Day" />
+            <TableColumn minWidth="64.0" prefWidth="299.0" text="Time">
+               <columns>
+                  <TableColumn fx:id="time_from" minWidth="31.0" prefWidth="148.0" text="From" />
+                  <TableColumn fx:id="time_to" minWidth="125.0" prefWidth="150.0" text="To" />
+               </columns>
+            </TableColumn>
+            <TableColumn fx:id="action" prefWidth="94.0" />
+        </columns>
+      </TableView>
+      <Label layoutX="631.0" layoutY="32.0" text="Doctor Time Schedule" textFill="#f20000">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TextField fx:id="search" layoutX="31.0" layoutY="125.0" onKeyReleased="#searchOnAction" prefHeight="25.0" prefWidth="482.0" promptText="Serach" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 4;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <JFXButton fx:id="save" buttonType="RAISED" layoutX="31.0" layoutY="48.0" onAction="#addTimeOnAction" prefHeight="44.0" prefWidth="251.0" styleClass="btn" text="Add">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-add-user-male-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+   </children>
+</AnchorPane>

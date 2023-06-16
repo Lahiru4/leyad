@@ -1,0 +1,19 @@
+.addTexCss {
+    -fx-border-color: black;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+}
+.lbl {
+    -fx-font-weight: bold;
+}
+.btn {
+    -fx-font-weight: bold;
+    -fx-background-color: #f8f5e4;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2;
+    -fx-border-radius: 25;
+    -fx-background-radius: 25;
+    -fx-border-color: white;
+    -fx-font-size: 14;
+}

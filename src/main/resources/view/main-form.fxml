@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="479.0" prefWidth="762.0" style="-fx-background-color: white;" styleClass="mainFxmlClass" stylesheets="@assests/styles/main-form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <ImageView fx:id="Appointment" fitHeight="80.0" fitWidth="80.0" layoutX="71.0" layoutY="195.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/icons8-appointment-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="doctor" fitHeight="80.0" fitWidth="80.0" layoutX="229.0" layoutY="195.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/icons8-doctor-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView fx:id="Patients" fitHeight="80.0" fitWidth="80.0" layoutX="406.0" layoutY="195.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/icons8-being-sick-96.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Separator layoutX="29.0" layoutY="135.0" prefHeight="0.0" prefWidth="699.0" />
+      <Label fx:id="lblMenu" alignment="CENTER" layoutX="11.0" layoutY="385.0" prefHeight="32.0" prefWidth="729.0" style="-fx-font-weight: bold;" text="Welcome" textAlignment="CENTER" textFill="#0a39f7">
+         <font>
+            <Font name="DejaVu Sans Mono Bold" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDescription" alignment="CENTER" layoutX="14.0" layoutY="424.0" prefHeight="17.0" prefWidth="722.0" style="-fx-font-weight: bold;" text="Please select one of above main operations to proceed">
+         <font>
+            <Font name="Ubuntu" size="12.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="report" fitHeight="80.0" fitWidth="80.0" layoutX="598.0" layoutY="195.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/report.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="273.0" layoutY="44.0" style="-fx-font-size: 30; -fx-font-weight: bold;" text="Channel Center" textFill="#eb0101" />
+   </children>
+</AnchorPane>

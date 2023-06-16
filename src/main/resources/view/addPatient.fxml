@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="535.0" prefWidth="706.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPatientController">
+   <children>
+      <AnchorPane layoutX="18.0" layoutY="8.0" prefHeight="520.0" prefWidth="671.0" stylesheets="@assests/styles/addDoctor.css">
+         <children>
+            <TextField fx:id="patient" editable="false" layoutX="230.0" layoutY="49.0" prefHeight="33.0" prefWidth="384.0" styleClass="addTexCss">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="name" layoutX="230.0" layoutY="115.0" prefHeight="33.0" prefWidth="384.0" styleClass="addTexCss">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="phoneNumber" layoutX="230.0" layoutY="344.0" prefHeight="33.0" prefWidth="384.0" styleClass="addTexCss">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="52.0" layoutY="55.0" styleClass="lbl" text="Patient Id">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="350.0" styleClass="lbl" text="Phone Number">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="267.0" styleClass="lbl" text="Gender">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="52.0" layoutY="121.0" styleClass="lbl" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="mr_ms" layoutX="130.0" layoutY="118.0" prefHeight="27.0" prefWidth="93.0" styleClass="addTexCss" />
+            <JFXButton fx:id="save" buttonType="RAISED" layoutX="496.0" layoutY="438.0" onAction="#saveOnAction" prefHeight="44.0" prefWidth="142.0" styleClass="btn" text="Save">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assests/images/icons8-checkmark-sign-with-outline-effect-isolated-on-white-background-36.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <ComboBox fx:id="gen" layoutX="230.0" layoutY="265.0" prefHeight="27.0" prefWidth="384.0" styleClass="addTexCss" />
+            <TextField fx:id="age" layoutX="230.0" layoutY="190.0" prefHeight="33.0" prefWidth="384.0" styleClass="addTexCss">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Label layoutX="52.0" layoutY="196.0" styleClass="lbl" text="Age">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

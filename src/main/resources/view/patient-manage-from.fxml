@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="950.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PatientManageFromController">
+    <children>
+        <AnchorPane fx:id="patient" prefHeight="950.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@assests/styles/doctor.css">
+            <children>
+                <TableView fx:id="patientTable" layoutX="37.0" layoutY="249.0" onMouseClicked="#onMouseOnAction" prefHeight="600.0" prefWidth="1189.0" stylesheets="@assests/styles/Table.css">
+                    <columns>
+                        <TableColumn fx:id="id" prefWidth="184.99996948242188" text="Patient Id Number" />
+                        <TableColumn fx:id="name" prefWidth="324.0" text="Name" />
+                        <TableColumn fx:id="age" prefWidth="203.0" text="Age" />
+                        <TableColumn fx:id="gen" prefWidth="210.0" text="gender" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="265.0" text="Phone Number" />
+                    </columns>
+                </TableView>
+                <JFXButton fx:id="addDoctor" buttonType="RAISED" layoutX="46.0" layoutY="83.0" onAction="#addPatientOnAction" prefHeight="44.0" prefWidth="228.0" styleClass="btn" text="Add Patient ">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assests/images/icons8-add-user-male-48.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <Label layoutX="957.0" layoutY="25.0" text="Patient Manage Form" textFill="RED">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                </Label>
+                <JFXButton fx:id="print" buttonType="RAISED" layoutX="357.0" layoutY="83.0" onAction="#printOnActinon" prefHeight="44.0" prefWidth="228.0" styleClass="btn" text="Print">
+                    <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assests/images/icons8-print-48.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+                <TextField fx:id="search" layoutX="36.0" layoutY="188.0" onAction="#searchOnAction" prefHeight="33.0" prefWidth="670.0" promptText="search" styleClass="tex">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </TextField>
+                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="1205.0" layoutY="878.0" onAction="#logOutOnAction" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+                    <graphic>
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@assests/images/icons8-sign-out-64.png" />
+                            </image>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </ImageView>
+                    </graphic>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </JFXButton>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1000.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-being-sick-96.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

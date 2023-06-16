@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="624.0" prefWidth="893.0" stylesheets="@assests/styles/addDoctorTime.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddTimeAndDayController">
+   <children>
+      <AnchorPane layoutX="348.0" layoutY="173.0" prefHeight="373.0" prefWidth="521.0" style="-fx-border-width: 2; -fx-background-radius: 30; -fx-border-radius: 30;" styleClass="addTexCss">
+         <children>
+            <JFXRadioButton fx:id="monDay" layoutX="14.0" layoutY="18.0" text="Monday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="tuesday" layoutX="14.0" layoutY="67.0" text="Tuesday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="wednesday" layoutX="14.0" layoutY="120.0" text="Wednesday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="thursday" layoutX="14.0" layoutY="171.0" text="Thursday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="friday" layoutX="14.0" layoutY="222.0" text="Friday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="saturday" layoutX="14.0" layoutY="272.0" text="Saturday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="sunday" layoutX="14.0" layoutY="315.0" text="Sunday">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <TextField fx:id="m_f" layoutX="177.0" layoutY="16.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="m_to" layoutX="291.0" layoutY="16.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="m_com" layoutX="404.0" layoutY="16.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+            <TextField fx:id="tu_f" layoutX="177.0" layoutY="65.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="tu_to" layoutX="291.0" layoutY="65.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="tu_com" layoutX="404.0" layoutY="65.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+            <TextField fx:id="we_f" layoutX="177.0" layoutY="118.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="we_to" layoutX="291.0" layoutY="118.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="we_com" layoutX="404.0" layoutY="118.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+            <TextField fx:id="thu_f" layoutX="177.0" layoutY="169.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="thu_to" layoutX="291.0" layoutY="169.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="tur_com" layoutX="404.0" layoutY="169.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+            <TextField fx:id="fr_f" layoutX="177.0" layoutY="220.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="fr_to" layoutX="291.0" layoutY="220.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="fri_com" layoutX="404.0" layoutY="220.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+            <TextField fx:id="sat_f" layoutX="177.0" layoutY="270.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="sat_to" layoutX="291.0" layoutY="270.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="satu_com" layoutX="404.0" layoutY="270.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+            <TextField fx:id="sun_f" layoutX="177.0" layoutY="313.0" prefHeight="25.0" prefWidth="100.0" />
+            <TextField fx:id="sun_to" layoutX="291.0" layoutY="313.0" prefHeight="25.0" prefWidth="100.0" />
+            <ComboBox fx:id="sun_com" layoutX="404.0" layoutY="313.0" prefHeight="25.0" prefWidth="85.0" promptText="am/pm" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="619.0" layoutY="27.0" text="Add Time And Day" textFill="RED">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="doctor" layoutX="51.0" layoutY="173.0" onMouseClicked="#tableMouseClickOnAction" prefHeight="373.0" prefWidth="297.0" stylesheets="@assests/styles/Table.css">
+        <columns>
+          <TableColumn fx:id="name" prefWidth="295.0" text="Doctor" />
+        </columns>
+      </TableView>
+      <Label fx:id="nameDoctor" alignment="CENTER" layoutX="44.0" layoutY="76.0" prefHeight="30.0" prefWidth="796.0" style="-fx-font-weight: bold;" text="Doctor Name" textFill="#3300ff">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="save" buttonType="RAISED" layoutX="710.0" layoutY="558.0" onAction="#saveOnAction" prefHeight="44.0" prefWidth="139.0" styleClass="btn" text="Save">
+         <graphic>
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-ok-48.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </JFXButton>
+      <TextField fx:id="search" layoutX="51.0" layoutY="127.0" onKeyReleased="#searcoOnAction" prefHeight="25.0" prefWidth="297.0" promptText="Search" />
+   </children>
+</AnchorPane>

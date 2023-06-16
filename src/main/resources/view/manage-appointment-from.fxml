@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="950.0" prefWidth="1280.0" style="-fx-background-color: white;" stylesheets="@assests/styles/appointnment.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ManageAppointmentFromController">
+   <children>
+      <Label layoutX="878.0" layoutY="28.0" text="Appointnment Form" textFill="#eb0000">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <TableView fx:id="patientTable" layoutX="774.0" layoutY="96.0" onMouseClicked="#setPationDataOnMouseClickAction" prefHeight="533.0" prefWidth="467.0" stylesheets="@assests/styles/Table.css">
+        <columns>
+          <TableColumn fx:id="patient_id" prefWidth="234.0" text="ID Number" />
+          <TableColumn fx:id="patient_name" prefWidth="232.0" text="Name" />
+        </columns>
+      </TableView>
+      <AnchorPane layoutX="52.0" layoutY="97.0" prefHeight="800.0" prefWidth="669.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 10; -fx-border-width: 2;">
+         <children>
+            <TextField fx:id="idNumber" editable="false" layoutX="251.0" layoutY="24.0" onKeyReleased="#idNumberOnKeyAction" prefHeight="33.0" prefWidth="348.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <TextField fx:id="name" layoutX="251.0" layoutY="80.0" onKeyReleased="#nameOnKeyAction" prefHeight="33.0" prefWidth="348.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <TextField fx:id="age" layoutX="251.0" layoutY="138.0" prefHeight="33.0" prefWidth="228.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <Label layoutX="38.0" layoutY="27.0" style="-fx-font-size: 20;" styleClass="lbl" text="ID Number" textFill="#e43030">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="83.0" style="-fx-font-size: 20;" styleClass="lbl" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="38.0" layoutY="141.0" prefHeight="21.0" prefWidth="59.0" style="-fx-font-size: 20;" styleClass="lbl" text="Age">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="197.0" prefHeight="21.0" prefWidth="80.0" style="-fx-font-size: 20;" styleClass="lbl" text="Gender">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="gen" layoutX="251.0" layoutY="194.0" prefHeight="33.0" prefWidth="228.0" promptText="Select" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <ComboBox fx:id="mr_ms" layoutX="132.0" layoutY="81.0" prefHeight="32.0" prefWidth="105.0" promptText="select" style="-fx-font-size: 14;" styleClass="addTexCss" />
+            <Label fx:id="doctor" layoutX="36.0" layoutY="361.0" prefHeight="21.0" prefWidth="80.0" style="-fx-font-size: 20; -fx-font-weight: bold;" styleClass="lbl" text="Doctor" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="doctorComBox" layoutX="251.0" layoutY="358.0" onAction="#doctorSelectOnActio" prefHeight="27.0" prefWidth="334.0" promptText="Select" style="-fx-font-size: 14; -fx-font-weight: bold;" styleClass="addTexCss" visible="false" />
+            <Label fx:id="doctorName" alignment="CENTER" layoutX="251.0" layoutY="403.0" prefHeight="21.0" prefWidth="138.0" style="-fx-font-size: 20;" styleClass="lbl" text="Doctor Free   :" textFill="#1541b9" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="doctorFree" alignment="CENTER" layoutX="415.0" layoutY="403.0" prefHeight="21.0" prefWidth="174.0" style="-fx-font-size: 20;" styleClass="lbl" text="00.00" textFill="#0813e8" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="hospitalFree" layoutX="251.0" layoutY="536.0" onAction="#hospitelFreeOnActio" onKeyReleased="#hospitelFreeOnActio2" prefHeight="33.0" prefWidth="290.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <Label layoutX="38.0" layoutY="539.0" prefHeight="30.0" prefWidth="160.0" style="-fx-font-size: 20;" styleClass="lbl" text="Hospital Fee">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXRadioButton fx:id="medicalTest" layoutX="264.0" layoutY="316.0" onAction="#medicalTestOnAction" text="Medical Test">
+               <toggleGroup>
+                  <ToggleGroup fx:id="med" />
+               </toggleGroup>
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXRadioButton>
+            <JFXRadioButton fx:id="chane" layoutX="445.0" layoutY="316.0" onAction="#chanelTestOnAction" text="chanel" toggleGroup="$med">
+               <font>
+                  <Font size="15.0" />
+               </font></JFXRadioButton>
+            <ComboBox fx:id="selectTestComBox" layoutX="251.0" layoutY="399.0" prefHeight="40.0" prefWidth="295.0" promptText="Select Test" style="-fx-font-size: 15;" styleClass="addTexCss" visible="false" />
+            <TextField fx:id="testFreeTexFeld" layoutX="251.0" layoutY="479.0" onAction="#enterOnAction" prefHeight="25.0" prefWidth="174.0" style="-fx-font-size: 15;" styleClass="addTexCss" visible="false" />
+            <Label fx:id="testFreeLbl" layoutX="39.0" layoutY="482.0" prefHeight="30.0" prefWidth="138.0" style="-fx-font-size: 20;" styleClass="lbl" text="Test Fee" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phoneNumber" layoutX="248.0" layoutY="253.0" prefHeight="33.0" prefWidth="348.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <Label layoutX="35.0" layoutY="259.0" style="-fx-font-size: 20;" styleClass="lbl" text="Phone Number">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="address" layoutX="248.0" layoutY="320.0" prefHeight="27.0" prefWidth="334.0" styleClass="addTexCss" visible="false" />
+            <Label layoutX="35.0" layoutY="326.0" styleClass="lbl" text="Address" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="number" layoutX="583.0" layoutY="429.0" prefHeight="44.0" prefWidth="49.0" promptText="No:" style="-fx-border-radius: 25; -fx-border-color: black; -fx-background-radius: 25; -fx-font-style: red;">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="total" editable="false" layoutX="252.0" layoutY="603.0" prefHeight="33.0" prefWidth="290.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <Label layoutX="39.0" layoutY="606.0" prefHeight="30.0" prefWidth="160.0" style="-fx-font-size: 20;" styleClass="lbl" text="Totale Amount ">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="save" buttonType="RAISED" layoutX="462.0" layoutY="744.0" onAction="#saveOnAction" prefHeight="34.0" prefWidth="174.0" styleClass="btn" stylesheets="@assests/styles/doctor.css" text="Save Appointnment">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </JFXButton>
+            <TextField fx:id="cashPaid" layoutX="252.0" layoutY="661.0" onAction="#cashPaidOnAction" prefHeight="33.0" prefWidth="290.0" style="-fx-font-size: 15;" styleClass="addTexCss" />
+            <Label layoutX="40.0" layoutY="664.0" prefHeight="30.0" prefWidth="146.0" style="-fx-font-size: 20;" styleClass="lbl" text="Chash Paid">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="blance" editable="false" layoutX="253.0" layoutY="715.0" prefHeight="25.0" prefWidth="174.0" style="-fx-font-size: 15;" styleClass="addTexCss">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <Label layoutX="43.0" layoutY="720.0" prefHeight="21.0" prefWidth="120.0" style="-fx-font-size: 20;" styleClass="lbl" text="Blance">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="scanFree" layoutX="252.0" layoutY="467.0" onAction="#scaneFreeOnAction" prefHeight="32.0" prefWidth="290.0" style="-fx-font-size: 15;" styleClass="addTexCss" text="00" visible="false" />
+            <Label fx:id="scanFreeLbl" layoutX="37.0" layoutY="467.0" prefHeight="30.0" prefWidth="160.0" style="-fx-font-size: 20;" styleClass="lbl" text="Scan Fee" visible="false">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="appointnmentDate" layoutX="545.0" layoutY="43.0" prefHeight="25.0" prefWidth="174.0" textFill="#fc0000">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Label>
+      <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="1195.0" layoutY="877.0" onAction="#logOutOnAction" style="-fx-background-radius: 20; -fx-border-radius: 20;">
+         <graphic>
+            <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@assests/images/icons8-sign-out-64.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label layoutX="58.0" layoutY="44.0" prefHeight="28.0" prefWidth="96.0" style="-fx-font-weight: bold; -fx-font-size: 19;" text="Ivoice No:" textFill="#0d4ee8">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="invoiceNumber" layoutX="153.0" layoutY="46.0" prefHeight="28.0" prefWidth="254.0" style="-fx-font-weight: bold; -fx-font-size: 19;">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="152.0" fitWidth="414.0" layoutX="899.0" layoutY="694.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@assests/images/paper-composition-business-writing.jpg" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>

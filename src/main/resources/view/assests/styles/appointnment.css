@@ -1,0 +1,9 @@
+.addTexCss {
+    -fx-border-color: black;
+    -fx-background-radius: 5;
+    -fx-border-radius: 5;
+    -fx-background-color: white;
+}
+.lbl {
+    -fx-font-weight: bold;
+}
