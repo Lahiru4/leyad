@@ -21,7 +21,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import model.TimeDTO;
+import dto.TimeDTO;
 import org.controlsfx.control.Notifications;
 import tdm.TimeTM;
 

@@ -5,8 +5,8 @@ import dao.SQLUtil;
 import dao.custom.DoctorDAO;
 import dao.custom.impl.DoctorDAOImpl;
 import db.DbConnection;
-import model.DoctorDTO;
-import model.TimeDTO;
+import dto.DoctorDTO;
+import dto.TimeDTO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

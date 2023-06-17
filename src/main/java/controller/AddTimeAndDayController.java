@@ -13,8 +13,8 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
-import model.DoctorDTO;
-import model.TimeDTO;
+import dto.DoctorDTO;
+import dto.TimeDTO;
 import tdm.DoctorTM;
 
 import java.net.URL;

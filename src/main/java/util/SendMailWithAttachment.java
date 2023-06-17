@@ -2,7 +2,7 @@ package util;
 
 import dao.custom.AdminDAO;
 import dao.custom.impl.AdminDAOImpl;
-import model.AdminDTO;
+import dto.AdminDTO;
 
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;

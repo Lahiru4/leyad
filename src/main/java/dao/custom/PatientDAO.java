@@ -1,7 +1,7 @@
 package dao.custom;
 
 import dao.CrudDAO;
-import model.PatientDTO;
+import dto.PatientDTO;
 
 import java.sql.SQLException;
 

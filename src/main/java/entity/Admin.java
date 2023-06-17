@@ -1,13 +1,14 @@
-package model;
+package entity;
 
+import dto.AdminDTO;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
-@Data
 @AllArgsConstructor
-public class AdminDTO {
+@Data
+public class Admin {
     private String name;
     private String gmail;
     private String number;

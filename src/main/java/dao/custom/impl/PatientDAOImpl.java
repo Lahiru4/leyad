@@ -2,8 +2,7 @@ package dao.custom.impl;
 
 import dao.SQLUtil;
 import dao.custom.PatientDAO;
-import model.DoctorDTO;
-import model.PatientDTO;
+import dto.PatientDTO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

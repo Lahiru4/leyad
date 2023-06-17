@@ -2,8 +2,8 @@ package dao.custom.impl;
 
 import dao.SQLUtil;
 import dao.custom.DoctorDAO;
-import model.DoctorDTO;
-import model.TimeDTO;
+import dto.DoctorDTO;
+import dto.TimeDTO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;

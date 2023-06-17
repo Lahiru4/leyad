@@ -1,7 +1,7 @@
 package dao.custom;
 
 import dao.CrudDAO;
-import model.TimeDTO;
+import dto.TimeDTO;
 
 import java.sql.SQLException;
 

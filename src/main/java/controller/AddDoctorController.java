@@ -8,7 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import model.DoctorDTO;
+import dto.DoctorDTO;
 
 import java.net.URL;
 import java.sql.SQLException;
@@ -26,6 +26,7 @@ public class AddDoctorController implements Initializable {
     public ComboBox<String> mr_ms;
     public ManageDoctorFromController manageDoctorFromController;
     public JFXButton save;
+
 
     public DoctorDAO doctorDAO=new DoctorDAOImpl();
     public TextField hosFee;

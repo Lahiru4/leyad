@@ -1,7 +1,6 @@
 package controller;
 
 import com.jfoenix.controls.JFXButton;
-import dao.CrudDAO;
 import dao.custom.PatientDAO;
 import dao.custom.impl.PatientDAOImpl;
 import javafx.event.ActionEvent;
@@ -13,8 +12,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Duration;
-import model.PatientDTO;
-import org.checkerframework.checker.units.qual.A;
+import dto.PatientDTO;
 import org.controlsfx.control.Notifications;
 import tdm.PatientTM;
 

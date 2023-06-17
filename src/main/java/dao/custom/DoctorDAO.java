@@ -1,8 +1,8 @@
 package dao.custom;
 
 import dao.CrudDAO;
-import model.DoctorDTO;
-import model.TimeDTO;
+import dto.DoctorDTO;
+import dto.TimeDTO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

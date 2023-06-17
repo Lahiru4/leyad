@@ -4,8 +4,8 @@ import dao.CrudDAO;
 import dao.SQLUtil;
 import dao.custom.AppointnmentDAO;
 import db.DbConnection;
-import model.AppintnmentDTO;
-import model.PatientDTO;
+import dto.AppintnmentDTO;
+import dto.PatientDTO;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

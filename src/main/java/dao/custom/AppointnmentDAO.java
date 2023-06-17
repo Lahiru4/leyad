@@ -1,8 +1,8 @@
 package dao.custom;
 
 import dao.CrudDAO;
-import model.AppintnmentDTO;
-import model.PatientDTO;
+import dto.AppintnmentDTO;
+import dto.PatientDTO;
 
 import java.sql.SQLException;
 import java.util.ArrayList;

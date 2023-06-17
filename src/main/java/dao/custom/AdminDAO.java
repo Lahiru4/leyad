@@ -1,9 +1,12 @@
 package dao.custom;
 
-import model.AdminDTO;
+import dao.CrudDAO;
+import dao.SQLUtil;
+import dto.AdminDTO;
+import entity.Admin;
 
 import java.sql.SQLException;
 
-public interface AdminDAO {
-    public AdminDTO getAdmin() throws SQLException, ClassNotFoundException;
+public interface AdminDAO extends CrudDAO<Admin> {
+    public Admin getAdmin() throws SQLException, ClassNotFoundException;
 }

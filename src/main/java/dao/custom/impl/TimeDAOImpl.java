@@ -2,8 +2,7 @@ package dao.custom.impl;
 
 import dao.SQLUtil;
 import dao.custom.TimeDAO;
-import model.AppintnmentDTO;
-import model.TimeDTO;
+import dto.TimeDTO;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
