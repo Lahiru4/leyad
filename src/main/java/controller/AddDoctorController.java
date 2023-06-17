@@ -1,9 +1,6 @@
 package controller;
 
-import bo.custom.DoctorBO;
-import bo.custom.impl.DoctorBOImpl;
 import com.jfoenix.controls.JFXButton;
-import com.jfoenix.controls.JFXRadioButton;
 import dao.custom.DoctorDAO;
 import dao.custom.impl.DoctorDAOImpl;
 import javafx.event.ActionEvent;
@@ -12,11 +9,9 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import model.DoctorDTO;
-import model.TimeDTO;
 
 import java.net.URL;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AddDoctorController implements Initializable {
